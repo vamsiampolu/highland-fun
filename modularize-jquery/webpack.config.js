@@ -1,0 +1,29 @@
+module.exports = {
+  entry:'./app',
+  output:{
+    filename:'bundle.js'
+  },
+  resolve:{
+    alias:{
+     '../external/sizzle/dist/sizzle.js':'./node_modules/sizzle/dist/sizzle.js'
+    }
+  },
+  module:{
+    preLoaders:[
+      {
+        test:/jquery\/src\/selector-sizzle\.js$/,
+	      loader:'string-replace',
+	      query:{
+	         search:'../external/sizzle/dist/sizzle',
+	         replace:'sizzle'
+	       }
+      }
+    ],
+    loaders:[
+      {
+        test:/jquery[\\\/]src[\\\/]selector\.js$/,
+	loader:'amd-define-factory-patcher-loader',
+      },
+    ] 
+  },
+};

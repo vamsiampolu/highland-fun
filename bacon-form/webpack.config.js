@@ -1,0 +1,26 @@
+require('dotenv').config();
+module.exports = {
+  entry:['babel-polyfill','./app.js'],
+  output:{
+    filename:'./bundle.js'
+  },
+  module:{
+    loaders:[
+      {
+        test:/\.js$/,
+	loader:'babel',
+	exclude:/(node_modules|bower_components)/
+      },
+      {
+        test:/\.css$/,
+	loaders:['style','css']
+      }
+    ]
+  },
+  devtool:'cheap-module-eval-source-map',
+  devServer:{
+    inline:true,
+    contentBase:'./',
+    port:3000
+  }
+};

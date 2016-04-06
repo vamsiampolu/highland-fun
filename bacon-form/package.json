@@ -1,0 +1,34 @@
+{
+  "name": "bacon-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-polyfill": "^6.6.1",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-register": "^6.6.5",
+    "css-loader": "^0.23.1",
+    "dotenv": "^2.0.0",
+    "eslint-plugin-react": "^4.2.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "awesomplete": "^1.1.0",
+    "highland": "^2.7.1",
+    "jquery": "^2.2.1",
+    "tcomb": "^3.0.0",
+    "tcomb-validation": "^3.0.0"
+  }
+}
